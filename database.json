@@ -1,0 +1,105 @@
+{
+  "users": [
+    {
+      "id": "number",
+      "isActive": "boolean",
+      "role": "admin",
+      "email": "value",
+      "password": "value",
+      "firstName": "Value",
+      "lastName": "value",
+      "contact": "number",
+      "dob": "short date",
+      "address": {
+        "house_number": "value",
+        "street": "value",
+        "city": "value",
+        "province": "value",
+        "brgy": "value"
+      },
+      "orders": [
+        {
+          "orderedDate": "date",
+          "productName": "products",
+          "image": "image",
+          "description": "description",
+          "qty": "number",
+          "unitPrice": "number",
+          "total": "number",
+          "status": "value"
+        }
+      ],
+      "interests": [
+        {
+          "category": "categories"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "fdhgdh",
+      "productName": "hdfhdf",
+      "image": "viber_image_2022-08-22_13-27-13-566.png",
+      "description": "wertwert",
+      "price": "gsdfgfg",
+      "quantity": "345",
+      "date": "Aug 24, 2022",
+      "paymentType": "COD",
+      "isActive": false,
+      "rating": [],
+      "customers": [],
+      "sold": 0
+    },
+    {
+      "id": 2,
+      "category": "Home & Garden",
+      "productName": "Plant",
+      "image": "ARRAY METHOD.jpg",
+      "description": "White Plant Super Long Description for Plant \nWhite Plant Super Long Description for Plant White Plant Super Long Description for Plant \nWhite Plant Super Long Description for Plant White Plant Super Long Description for Plant \nWhite Plant Super Long Description for Plant ",
+      "price": "230",
+      "quantity": "23",
+      "date": "Aug 24, 2022",
+      "paymentType": "COD",
+      "isActive": true,
+      "rating": [],
+      "customers": [],
+      "sold": 0
+    },
+    {
+      "id": 3,
+      "category": "Electronics",
+      "productName": "Vivo",
+      "image": "ARRAY METHOD.jpg",
+      "description": "32 GB Smartphone, 32 GB Smartphone ",
+      "price": "23000",
+      "quantity": "21",
+      "date": "Aug 24, 2022",
+      "paymentType": "COD",
+      "isActive": true,
+      "customers": [],
+      "sold": 0
+    },
+    {
+      "id": 4,
+      "category": "Electronics",
+      "productName": "Vivo",
+      "image": "ARRAY METHOD.jpg",
+      "description": "32 GB Smartphone, 32 GB Smartphone ",
+      "price": "23000",
+      "quantity": "21",
+      "date": "Aug 24, 2022",
+      "paymentType": "COD",
+      "isActive": true,
+      "rating": [],
+      "customers": [],
+      "sold": 0
+    }
+  ],
+  "admin": {
+    "role": "admin",
+    "username": "value",
+    "password": "value"
+  }
+}

@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div class="authentication-inner">
+   
+      <div class="card">
+        <div class="card-body">
+    
+          <div class="app-brand justify-content-center">
+            <a href="index.html" class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.pnh" style="height: 50px; width:100px;">
+              </span>
+            </a>
+          </div>
+        
+          <h4 class="mb-2">Hello! Your shopping experience starts here...</h4>
+          <p class="mb-4">Make shopping easier with easy-shop</p>
+
+          <form [formGroup]="registerForm" class="mb-3">
+            <div class="mb-3">
+              <label for="firtName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="firstName"
+                placeholder="First Name"
+                autofocus
+              />
+            </div>
+            <div class="mb-3">
+              <label for="middleName" class="form-label">Middle Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="middleName"
+                placeholder="Middle Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName ="lastName"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input 
+              type="text" 
+              class="form-control" 
+              formControlName ="email" 
+              placeholder="Email add" 
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input 
+              type="text" 
+              class="form-control" 
+              formControlName ="email" 
+              placeholder="Username" 
+              />
+            </div>
+
+            <div class="mb-3 form-password-toggle">
+              <label class="form-label" for="password">Password</label>
+              <div class="input-group input-group-merge">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  formControlName="password"
+                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                  aria-describedby="password"
+                />
+              </div>
+            </div>
+            <br>
+            <button class="btn us-btn-primary d-grid w-100" (click)="register()" >Sign Up</button>
+          </form>
+
+          <p class="text-center">
+            <span>Already have an account? </span>
+            <a href="login">
+              <span>Sign In</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
