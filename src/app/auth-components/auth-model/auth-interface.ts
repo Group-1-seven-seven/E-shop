@@ -3,6 +3,6 @@ export interface UserAuthentication {
     middleName: string,
     lastName: string,
     email: string,
-    username: string,
-    password: string
+    password: string,
+    role: string
 }

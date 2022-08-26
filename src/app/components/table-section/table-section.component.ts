@@ -40,10 +40,15 @@ export class TableSectionComponent implements OnInit {
     //     console.log(result.push(data[this.columns[parseInt(col)]]), "lets try")
     let result: string[] = []
     for(let col of this.columns){
-      if(Object.keys(data).includes(col.key)){
-        result.push(data[col.key])
-      }
+    //   if(Object.keys(data).includes(col.key)){
+    //     result.push(data[col.key])
+    //   }
+    // }
+    if(Object.keys(data).includes(this.columns[parseInt(col)])){
+      console.log(result.push(data[this.columns[parseInt(col)]]), "lets try")
+      
     }
+  }
     return result;
   }
 

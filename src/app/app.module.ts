@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeSectionComponent } from './components/home-section/home-section.component';
-import { ProductSectionComponent } from './components/product-section/product-section.component';
+// import { ProductSectionComponent } from './components/product-section/product-section.component';
 import { FilterPipe } from './shared/filter/filter.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { AdminSidebarComponent } from './shared/layout/admin-sidebar/admin-sidebar.component';
@@ -34,7 +34,7 @@ import { ForgotpassFormComponent } from './auth-components/forgotpass/forgotpass
     RegisterFormComponent,
     ForgotpassFormComponent,
     HomeSectionComponent,
-    ProductSectionComponent,
+    // ProductSectionComponent,
     FilterPipe,
   ],
   imports: [

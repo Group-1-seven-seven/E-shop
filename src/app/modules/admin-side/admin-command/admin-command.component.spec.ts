@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommandBarComponent } from './admin-command.component';
+import { AdminCommandComponent } from './admin-command.component';
 
-describe('CommandBarComponent', () => {
-  let component: CommandBarComponent;
-  let fixture: ComponentFixture<CommandBarComponent>;
+describe('AdminCommandComponent', () => {
+  let component: AdminCommandComponent;
+  let fixture: ComponentFixture<AdminCommandComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommandBarComponent ]
+      declarations: [ AdminCommandComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CommandBarComponent);
+    fixture = TestBed.createComponent(AdminCommandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

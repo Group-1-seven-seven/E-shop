@@ -12,7 +12,6 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 
 
-
 @NgModule({
   declarations: [
     AdminDashboardComponent,
@@ -22,7 +21,8 @@ import { ProductsListComponent } from './products-list/products-list.component';
     ProductDetailsComponent,
     CardSectionComponent,
     AdminCommandComponent,
-    UsersListComponent
+    UsersListComponent,
+    
   ],
   imports: [
     AdminRoutingModule,

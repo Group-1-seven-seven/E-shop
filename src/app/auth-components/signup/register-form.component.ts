@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { UserAuthentication } from '../auth-model/auth-interface';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +13,11 @@ import { UserAuthentication } from '../auth-model/auth-interface';
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
+
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private toast: ToastrService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router : Router, private toast: ToastrService,
+    private http : HttpClient) {
     this.registerForm = this.fb.group({
       firstName: [''],
       middleName: [''],
@@ -26,7 +30,7 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register = (): any => {
+  registerAction = (): any => {
     const userData = this.registerForm.getRawValue() as UserAuthentication
     if(!userData.firstName) {
      return this.toast.error('First Name is required!')
@@ -37,12 +41,28 @@ export class RegisterFormComponent implements OnInit {
      if(!userData.email) {
       return this.toast.error('Email is required!')
      }
-     if(!userData.username) {
-      return this.toast.error('Username is required!')
-     }
      if(!userData.password) {
       return this.toast.error('Password is required!')
      }
-    this.authService.register(userData).subscribe()
+    this.authService.register(userData).subscribe(x => {
+      this.registerForm.reset();
+      this.router.navigate(['login'])
+      return this.toast.success('Register Success')
+    },err=>{
+      this.toast.error("Something went wrong!")
+
+    })
   }
-}
+
+  // registerAction (): any {
+  //   this.http.post<any>("http://localhost:3000/post" , this.registerForm.value)
+  //   .subscribe(res=>{
+  //     this.toast.success("Registration success!")
+
+  //     this.registerForm.reset();
+  //     this.router.navigate(['login']);
+  //   },err=>{
+  //     this.toast.error("Something went wrong!")
+  //   })
+  // }
+  }

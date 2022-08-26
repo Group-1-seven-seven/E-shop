@@ -19,13 +19,9 @@
       },
       "orders": [
         {
-          "orderedDate": "date",
-          "productName": "products",
-          "image": "image",
-          "description": "description",
           "qty": "number",
-          "unitPrice": "number",
-          "total": "number",
+          "ordersDate": "long date",
+          "products": "products",
           "status": "value"
         }
       ],
@@ -101,5 +97,12 @@
     "role": "admin",
     "username": "value",
     "password": "value"
+  },
+  "post": {
+    "firstName": "Angelica",
+    "middleName": "Tripole",
+    "lastName": "Gucela",
+    "email": "agucela@77global.biz",
+    "password": "angge28"
   }
 }

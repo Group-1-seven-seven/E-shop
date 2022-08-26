@@ -6,9 +6,6 @@ import { OrderSectionComponent } from './order-section/order-section.component';
 import { CheckoutSectionComponent } from './checkout-section/checkout-section.component';
 import { UserCartComponent } from './user-cart/user-cart.component';
 
-
-
-
 @NgModule({
   declarations: [ 
     UserDashboardComponent,

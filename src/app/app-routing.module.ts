@@ -3,16 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { ForgotpassFormComponent } from './auth-components/forgotpass/forgotpass-form.component';
 import { LoginFormComponent } from './auth-components/signin/login-form.component';
 import { RegisterFormComponent } from './auth-components/signup/register-form.component';
-import { ProductSectionComponent } from './components/product-section/product-section.component';
-import { AdminAuthGuard } from './core/guards/admin-guard/admin-auth.guard';
-import { UserAuthGuard } from './core/guards/user-guard/user-auth.guard';
+// import { ProductSectionComponent } from './components/product-section/product-section.component';
+// import { AdminAuthGuard } from './core/guards/admin-guard/admin-auth.guard';
+// import { UserAuthGuard } from './core/guards/user-guard/user-auth.guard';
 import { HomeLayoutComponent } from './pages/home-layout/home-layout.component';
 import { AdminLayoutComponent } from './shared/layout/admin-layout/admin-layout.component';
 import { UserLayoutComponent } from './shared/layout/user-layout/user-layout.component';
 
 const ROUTES: Routes = [{
   path: '',
-  redirectTo: "forgotpassform",
+  redirectTo: "login",
   pathMatch: 'full'
 },
 {
@@ -24,7 +24,7 @@ const ROUTES: Routes = [{
   component: RegisterFormComponent
 },
 {
-  path: "forgotpassform",
+  path: "forgotpass-form",
   component: ForgotpassFormComponent
 },
 {
@@ -32,13 +32,9 @@ const ROUTES: Routes = [{
   component: HomeLayoutComponent
 },
 {
-  path: "products",
-  component: ProductSectionComponent
-},
-{
   path: '',
   component: UserLayoutComponent,
-  canActivate: [UserAuthGuard],
+  // canActivate: [UserAuthGuard],
   children: [
     {
       path: "user",
@@ -49,7 +45,7 @@ const ROUTES: Routes = [{
 {
   path: '',
   component: AdminLayoutComponent,
-  canActivate: [AdminAuthGuard],
+  // canActivate: [AdminAuthGuard],
   children: [
     {
       path: 'admin',

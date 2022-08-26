@@ -2,61 +2,56 @@
     <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner">
     
-     
     <div class="card">
     <div class="card-body">
-        
-
     <div class="app-brand justify-content-center">
-        <a href="index.html" class="app-brand-link gap-2">
+        <a class="app-brand-link gap-2">
         <span class="app-brand-logo demo">
-            <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:100px;">
+            <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:150px;">
         </span>
         </a>
     </div>
     
     <h4 class="mb-2">Hi! Welcome to E-shop...</h4>
-    <p class="mb-4">Your one stop online shop! Sign-in now to start your shopping spree.</p>
+    <p class="mb-4">Your one stop online shop! <br> Sign-in now to start your shopping spree.</p>
     
     <form [formGroup]= "loginForm" class="mb-3" >
         <div class="mb-3">
-        <label for="email" class="form-label">Username</label>
+        <label for="email" class="form-label"></label>
         <input
             type="text"
             class="form-control"
-            formControlName="username"
-            placeholder="Username"
-            autofocus
-        />
+            formControlName="email"
+            placeholder="Email Add"
+            autofocus/>
         </div>
+
         <div class="mb-3 form-password-toggle">
         <div class="d-flex justify-content-between">
-            <label class="form-label" for="password">Password</label>
-            
+            <label class="form-label" for="password"></label>
         </div>
         <div class="input-group input-group-merge">
             <input
             type="password"
             class="form-control"
             formControlName="password"
-            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-            aria-describedby="password"
-            />
-            
+            placeholder="Password"
+            aria-describedby="password"/>
         </div>
-        <a href="forgotpassword">
+        </div>
+        <div class="mb-3">
+        </div>
+        <div class="mb-3">
+        <button id="btn" class="btn us-btn-primary d-grid w-100" type="submit" (click)="login()">Sign In</button>
+        </div>
+        <p class="text-center">
+        <a href="forgotpass-form">
             <small>Forgot Password?</small>
-            </a>
-        </div>
-        <div class="mb-3">
-        </div>
-        <div class="mb-3">
-        <button class="btn us-btn-primary d-grid w-100" type="submit" (click)="login()">Sign In</button>
-        </div>
+            </a></p>
     </form>
     
     <p class="text-center">
-        <span>Don't have an acoount? </span>
+        <span>Don't have an account? </span>
         <a href="register">
         <span>Click here.</span>
         </a>

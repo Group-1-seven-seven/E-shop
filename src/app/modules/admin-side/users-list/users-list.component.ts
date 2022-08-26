@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UsersListComponent implements OnInit {
   data = {
-    title: "Users"
+    title: "Customer's List"
   }
 
   constructor(private router: Router) { }

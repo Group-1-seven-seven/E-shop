@@ -18,7 +18,9 @@ export class AddProductComponent implements OnInit {
   dateNow = new Date();
   paramID: any;
 
-  data = {title: "Add Product"}
+  data = {
+    title: "Add Product"
+  }
 
   constructor(private fb: FormBuilder,
      private adminServices: AdminService, 

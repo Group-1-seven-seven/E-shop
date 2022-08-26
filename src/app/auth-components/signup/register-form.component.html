@@ -6,9 +6,9 @@
         <div class="card-body">
     
           <div class="app-brand justify-content-center">
-            <a href="index.html" class="app-brand-link gap-2">
+            <a class="app-brand-link gap-2">
               <span class="app-brand-logo demo">
-                <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.pnh" style="height: 50px; width:100px;">
+                <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:150px;">
               </span>
             </a>
           </div>
@@ -18,7 +18,7 @@
 
           <form [formGroup]="registerForm" class="mb-3">
             <div class="mb-3">
-              <label for="firtName" class="form-label">First Name</label>
+              <label for="firtName" class="form-label"></label>
               <input
                 type="text"
                 class="form-control"
@@ -28,7 +28,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="middleName" class="form-label">Middle Name</label>
+              <label for="middleName" class="form-label"></label>
               <input
                 type="text"
                 class="form-control"
@@ -37,7 +37,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="lastName" class="form-label">Last Name</label>
+              <label for="lastName" class="form-label"></label>
               <input
                 type="text"
                 class="form-control"
@@ -47,7 +47,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label"></label>
               <input 
               type="text" 
               class="form-control" 
@@ -56,31 +56,21 @@
               />
             </div>
 
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input 
-              type="text" 
-              class="form-control" 
-              formControlName ="email" 
-              placeholder="Username" 
-              />
-            </div>
-
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Password</label>
+              <label class="form-label" for="password"></label>
               <div class="input-group input-group-merge">
                 <input
                   type="password"
                   id="password"
                   class="form-control"
                   formControlName="password"
-                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                  placeholder="Password"
                   aria-describedby="password"
                 />
               </div>
             </div>
             <br>
-            <button class="btn us-btn-primary d-grid w-100" (click)="register()" >Sign Up</button>
+            <button id="btn" class="btn us-btn-primary d-grid w-100" (click)="registerAction()" >Sign Up</button>
           </form>
 
           <p class="text-center">

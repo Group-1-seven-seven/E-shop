@@ -10,7 +10,7 @@ import { Product } from 'src/app/models/product';
 })
 export class AdminDashboardComponent implements OnInit {
   data = {
-    title: "Dashboard",
+    title: "Admin Dashboard",
     buttons: [
       {
       type: "add-product",
