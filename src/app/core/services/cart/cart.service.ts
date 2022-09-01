@@ -91,8 +91,6 @@ export class CartService {
       });
     }
 
-
-    //other verison
     addProductCart = (data: any) => {
       return this.http.post(`${environment.url}/cart`, data).pipe(
         tap(x => x)

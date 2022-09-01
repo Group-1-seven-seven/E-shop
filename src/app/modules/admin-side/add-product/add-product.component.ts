@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AdminService } from 'src/app/core/services/admin/admin.service';
 import { ProductItem } from 'src/app/models/product-item';
 import { ToastrService } from 'ngx-toastr';
 import { DatePipe } from '@angular/common';
 import { ActivatedRoute} from '@angular/router';
 import { ValidationService } from 'src/app/core/services/validation/validation.service';
+import { AdminService } from 'src/app/core/services/users/admin/admin.service';
 
 @Component({
   selector: 'app-add-product',

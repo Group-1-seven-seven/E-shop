@@ -14,7 +14,7 @@
                   <h5>{{item.productName | slice: 0:20}}</h5>
                   <p>{{item.description | slice: 0:30}}</p>
                   <p><strong>Price:</strong> {{item.price | currency: 'PHP'}}</p>
-                  <button class="btn btn-danger" (click)="addToCart(item)">ADD TO CART</button>
+                  <button class="btn btn-danger" (click)="addToCart(item)" disabled>ADD TO CART</button>
                 </div>
               </ng-container>
             </div>

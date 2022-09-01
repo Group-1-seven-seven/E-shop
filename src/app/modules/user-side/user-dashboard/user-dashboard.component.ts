@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/core/models/users.interface';
-import { UserService } from 'src/app/core/services/user/user.service';
+import { UserService } from 'src/app/core/services/users/customer/user.service';
+
+
 
 export interface ChangePassword {
   newPassword: string,

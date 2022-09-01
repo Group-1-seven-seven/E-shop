@@ -60,4 +60,9 @@ export class HomeLayoutComponent implements OnInit {
       }
     })
   }
+
+  // goToSignin = () => {
+  //   this.router.navigate(['auth/signin']);
+  // }
+
 }

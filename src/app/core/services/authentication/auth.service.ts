@@ -12,6 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 export class AuthService {
   constructor(private http: HttpClient, private router: Router, private toast: ToastrService ) { }
 
+  getToken(){
+    return localStorage.getItem("token")? true: false;
+  }
+  
   register = (userData: UserAuthentication) => {
     return this.http.post(`${environment.url}/signup`, userData).pipe(
       catchError(err => {
@@ -51,7 +55,4 @@ export class AuthService {
     )
   }
 
-  getToken(){
-    return localStorage.getItem("token")? true: false;
-  }
 }

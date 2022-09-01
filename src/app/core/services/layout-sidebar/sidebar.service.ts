@@ -8,6 +8,7 @@ export class SidebarService {
 
   private sidebar: BehaviorSubject<boolean>;
   constructor() {
+    
     this.sidebar = new BehaviorSubject<boolean>(false);
    }
 

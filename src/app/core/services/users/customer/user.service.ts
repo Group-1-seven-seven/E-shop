@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { catchError, Observable, of, tap } from 'rxjs';
+import { User } from 'src/app/core/models/users.interface';
 import { environment } from 'src/environments/environment.prod';
-import { User } from '../../models/users.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -32,10 +33,4 @@ export class UserService {
       }),
     )
   }
-
-  // deleteAccount = () => {
-  //   return this.http.delete(`${environment.url}/users/${this.userID}`).pipe(
-  //     tap(x => x)
-  //   )
-  // }
 }

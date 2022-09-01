@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { SidebarService } from 'src/app/core/services/sidebar/sidebar.service';
+import { SidebarService } from 'src/app/core/services/layout-sidebar/sidebar.service';
 
 @Component({
   selector: 'app-user-layout',

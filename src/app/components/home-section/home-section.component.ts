@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/core/services/cart/cart.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CartService } from 'src/app/core/services/cart/cart.service';
 export class HomeSectionComponent implements OnInit {
   public searchTerm !: string;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
   }

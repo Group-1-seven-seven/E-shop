@@ -39,7 +39,7 @@
       "status": false,
       "rating": [],
       "customers": [],
-      "sold": 0,
+      "sold": 50,
       "type": "delete"
     },
     {
@@ -55,7 +55,7 @@
       "status": true,
       "rating": [],
       "customers": [],
-      "sold": 0
+      "sold": 32
     },
     {
       "id": 3,
@@ -70,7 +70,7 @@
       "status": true,
       "rating": [],
       "customers": [],
-      "sold": 0
+      "sold": 45
     },
     {
       "id": 4,
@@ -85,7 +85,7 @@
       "status": true,
       "rating": [],
       "customers": [],
-      "sold": 0
+      "sold": 28
     },
     {
       "id": 5,
@@ -100,7 +100,7 @@
       "status": true,
       "rating": [],
       "customers": [],
-      "sold": 0
+      "sold": 16
     },
     {
       "id": 6,
@@ -115,7 +115,7 @@
       "status": true,
       "rating": [],
       "customers": [],
-      "sold": 0
+      "sold": 34
     },
     {
       "id": 7,
@@ -132,5 +132,10 @@
       "sold": 0,
       "type": "delete"
     }
-  ]
+  ],
+  "admin": {
+    "role": "admin",
+    "username": "value",
+    "password": "value"
+  }
 }

@@ -14,8 +14,8 @@ export class UserOrderComponent implements OnInit {
   }
 
 
-   home() {
-    this.router.navigate(['layout-pages/home-layout']);
+   shopAgain() {
+    this.router.navigate(['layout-pages/products']);
   }
 
 }

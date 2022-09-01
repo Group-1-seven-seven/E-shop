@@ -63,7 +63,7 @@ export class ProductsComponent implements OnInit {
       }else {
         this.cartData[0].products.push(Object.assign(item, {qty: 1, cartTotal: item.price * 1}))
         this.cartService.addCustomerCart({id: this.cartData[0].id, cart: this.cartData[0]}).subscribe(x => {
-          this.toast.success("Product added successfully!")
+          this.toast.success("Product added successfully to cart!")
         })
       }
 
@@ -93,7 +93,7 @@ export class ProductsComponent implements OnInit {
 
   getCartData = () => {
     return this.cartService.getProductCart(this.userInfo.user?.id).subscribe(x => {
-      console.log(x)
+      // console.log(x)
       this.cartData = x
     })
   }

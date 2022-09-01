@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, TitleStrategy } from '@angular/router';
+import { AdminService } from 'src/app/core/services/users/admin/admin.service';
 // import { forkJoin, map } from 'rxjs';
-import { AdminService } from 'src/app/core/services/admin/admin.service';
 import { ProductItem } from 'src/app/models/product-item';
 
 @Component({

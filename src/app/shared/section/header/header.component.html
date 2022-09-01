@@ -61,18 +61,25 @@
                   <li>
                     <div class="dropdown-divider"></div>
                   </li>
+
                   <li *ngIf="userType">
                     <a class="dropdown-item" href="#" [routerLink]="['admin']">
-                      <!-- <i class="bx bx-home-circle me-2"></i> -->
                       <span class="align-middle ">Admin Dashboard</span>
                     </a>
                   </li>
+                  
                   <li *ngIf="!userType">
-                    <a class="dropdown-item"  [routerLink]="['user/user-profile']">
-                      <!-- <i class="bx bxs-user-account me-2"></i> -->
-                      <span class="align-middle">Your Account</span>
+                    <a class="dropdown-item"  [routerLink]="['user/user-orders']">
+                      <span class="align-middle">Orders</span>
                     </a>
                   </li>
+
+                  <li *ngIf="!userType">
+                    <a class="dropdown-item"  [routerLink]="['user/user-profile']">
+                      <span class="align-middle">Account Profile</span>
+                    </a>
+                  </li>
+
                   <li>
                     <div class="dropdown-divider"></div>
                   </li>

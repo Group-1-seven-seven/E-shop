@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SidebarService } from 'src/app/core/services/sidebar/sidebar.service';
+import { SidebarService } from 'src/app/core/services/layout-sidebar/sidebar.service';
 declare function hideSidebar(): any
 @Component({
   selector: 'app-admin-sidebar',
