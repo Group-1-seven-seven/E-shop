@@ -1,0 +1,35 @@
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+      <a class="app-brand-link">
+        <span class="app-brand-text text-uppercase demo menu-text fw-bolder ms-2">Admin</span>
+      </a>
+
+      <a href="javascript:void(0);" (click)="hide()" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+      </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+
+      <li class="menu-item mt-3">
+        <a [routerLink]="['admin/admin-dashboard']" routerLinkActive="active-link" class="menu-link" (click)="hide()">      
+          <div data-i18n="Analytics">Top Products</div>
+        </a>
+      </li>
+
+      <li class="menu-item mt-3">
+        <a [routerLink]="['admin/product-list']" routerLinkActive="active-link" class="menu-link" (click)="hide()">
+          <div data-i18n="Layouts">All Products</div>
+        </a>
+      </li>
+
+      <li class="menu-item mt-3">
+        <a [routerLink]="['admin/users-list']" routerLinkActive="active-link" class="menu-link" (click)="hide()">
+          <div data-i18n="Layouts">Customers</div>
+        </a>
+      </li>
+      
+    </ul>
+  </aside>

@@ -1,0 +1,26 @@
+<app-home-section></app-home-section>
+<div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <div class="layout-page">
+    
+        <div class="container-fluid flex-grow-1 container-p-y">
+          <div class="container">
+            <div class="row">
+              <ng-container *ngFor="let item of filterCategory | filter :searchKey: 'productName'">
+                <div class="card col-md-3">
+                  
+          
+                  <img [src]="'../../../assets/products/' + item.image ">
+                  <h5>{{item.productName | slice: 0:20}}</h5>
+                  <p>{{item.description | slice: 0:30}}</p>
+                  <p><strong>Price:</strong> {{item.price | currency: 'PHP'}}</p>
+                  <button class="btn btn-danger" (click)="addToCart(item)">ADD TO CART</button>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        

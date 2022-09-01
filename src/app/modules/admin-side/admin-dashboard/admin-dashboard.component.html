@@ -1,0 +1,11 @@
+<!-- <app-admin-command [data]="comData" (commandEmitter)="comActionEmit($event)"></app-admin-command> -->
+
+<section class="page-container">
+    
+    <div class="card-body container">
+        <div class="card-header">
+            Popular Products
+        </div>
+        <app-table-section (headerBtnEmitter)="tblHeaderAction($event)"  [data]="products" [columns]="columns"></app-table-section>
+    </div>
+</section>

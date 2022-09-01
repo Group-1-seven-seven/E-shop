@@ -1,0 +1,94 @@
+<header class="header" [ngClass]="{'sticky-header': stickyHeader}">
+  <div class="nav-header-container container">
+    <nav class="us-navbar">
+      <div class="us-navbar-menu-header">
+        <div class="navigation-container">
+          <div (click)="toggle()" #sidebarToggle
+            class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+          <div class="logo-wrapper">
+            <div class="avatar">
+              <img src="../.././assets/images/e-shop_logo.png" alt="e-shop-logo">
+            </div>
+          </div>
+
+          <div class="nav-item" *ngIf="!userType">
+            <button class="nav-link" [routerLink]="['layout-pages/home']">Home</button>
+          </div>
+          <div class="nav-item" *ngIf="!userType">
+            <button class="nav-link" [routerLink]="['layout-pages/products']">Categories</button>
+          </div>
+
+          <div class="nav-item" *ngIf="!isLogin">
+            <button [routerLink]="['auth/signin']" class="nav-link">Sign In</button>
+          </div>
+          <div class="nav-item" *ngIf="!isLogin">
+            <button [routerLink]="['auth/signup']" class="nav-link">Sign Up</button>
+          </div>
+          <div class="nav-item nav-item-con" *ngIf="!userType">
+            <a [routerLink]="['user/user-cart']" class="d-flex justify-content-center align-items-center">
+              <span class="menu-icon tf-icons bx bx-cart"></span>
+              <span class="badge bg-us-primary rounded-pill" *ngIf="isLogin">{{totalItem}}</span>
+            </a>
+          </div>
+       
+          <div class="nav-item navbar-dropdown dropdown-user dropdown" *ngIf="isLogin">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link d-flex justify-content-center align-items-center flex-row dropdown-toggle hide-arrow"
+                  href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar">
+                    <img src="../assets/images/empty.png" alt="Profile pic"
+                      class="rounded-circle" />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block">{{credentials.lastName + ', ' +
+                            credentials.firstName}}</span>
+                          <small class="text-muted">{{userType ? 'Admin' : 'User'}}</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li *ngIf="userType">
+                    <a class="dropdown-item" href="#" [routerLink]="['admin']">
+                      <!-- <i class="bx bx-home-circle me-2"></i> -->
+                      <span class="align-middle ">Admin Dashboard</span>
+                    </a>
+                  </li>
+                  <li *ngIf="!userType">
+                    <a class="dropdown-item"  [routerLink]="['user/user-profile']">
+                      <!-- <i class="bx bxs-user-account me-2"></i> -->
+                      <span class="align-middle">Your Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" (click)="logout()">
+                      <i class="bx bx-power-off me-2"></i>
+                      <span class="align-middle">Sign Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</header>

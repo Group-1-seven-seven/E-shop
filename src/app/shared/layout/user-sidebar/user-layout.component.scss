@@ -1,0 +1,26 @@
+#layout-menu {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    margin-top: 80px;
+}
+
+.layout-page {
+    margin-left: 250px;
+}
+
+app-footer {
+    position: relative !important;
+    
+}
+
+@media (max-width: 1199.98px)
+{
+    .layout-page {
+        margin-left: unset;
+    }
+}
+
+.layout-menu {
+    transition: all .3s ease-in !important;
+}

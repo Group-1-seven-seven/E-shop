@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+    <div>
+    
+    <div class="card">
+    <div class="card-body">
+    <div class="app-brand justify-content-center">
+        <a class="app-brand-link gap-2">
+        <span class="app-brand-logo demo">
+            <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:150px;">
+        </span>
+        </a>
+    </div><br>
+    
+    <h4 class="mb-2">Hi! Welcome to E-shop...</h4>
+    <p class="mb-4">Your one stop online shop! <br> Sign-in now to start your shopping spree.</p>
+    
+    <form [formGroup]= "loginForm" class="mb-3" >
+        <!-- <div class="mb-3">
+        <label for="username" class="form-label"></label>
+        <input
+            type="text"
+            class="form-control"
+            formControlName="username"
+            placeholder="Username"
+            autofocus/>
+        </div> -->
+        <div class="mb-3">
+            <label for="email" class="form-label"></label>
+            <input
+                type="text"
+                class="form-control"
+                formControlName="email"
+                placeholder="Email (example@email.com)"
+                autofocus/>
+            </div>
+
+        <div class="mb-3 form-password-toggle">
+        <div class="d-flex justify-content-between">
+            <label class="form-label" for="password"></label>
+        </div>
+        <div class="input-group input-group-merge">
+            <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Password"
+            aria-describedby="password"/>
+        </div>
+        </div>
+        <div class="mb-3">
+        </div>
+        <div class="mb-3">
+        <button id="btn" class="btn us-btn-primary d-grid w-100" type="submit" (click)="signin()">Sign In</button>
+        </div>
+        <p class="text-center">
+        <a href="auth\forgotpass-form">
+            <small>Forgot Password?</small>
+            </a></p>
+    </form>
+    
+    <p class="text-center">
+        <span>Create your own account. </span>
+        <a href="auth/signup">
+        <span>Click here.</span>
+        </a>
+     </p>
+                 </div>
+            </div><br>
+            <div class="credits">
+                © Seven Seven Trainees 2022, All rights reserved. Made with ❤️ by Group 1   
+            </div> 
+        </div>
+     </div>
+</div>
+    

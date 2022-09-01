@@ -1,0 +1,42 @@
+<div class="container-xxl">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div>
+      
+      <div class="card">
+        <div class="card-body">
+        
+          <div class="app-brand justify-content-center">
+            <a class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                  <img src="../../../assets/images/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:100px;">
+              </span>
+            </a>
+          </div><br>
+          
+          <h4 class="mb-2">Forgot your password? </h4>
+          <p class="mb-4">Enter your email and we'll send you the verification code to reset your password</p>
+          <form [formGroup]="forgotForm" class="mb-3">
+            <div class="mb-3">
+              <label class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="email"
+                placeholder="example@email.com"
+                autofocus
+              />
+            </div>
+            <button class="btn us-btn-primary d-grid w-100" (click)="send()">Send verification code to email</button>
+          </form>
+          <div class="text-center">
+            <button class="btn btn-outline-light" type="button">
+              <a href="auth/signin" class="text-dark">
+                Go back to Sign In
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

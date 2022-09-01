@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div>
+   
+      <div class="card">
+        <div class="card-body">
+    
+          <div class="app-brand justify-content-center">
+            <a class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <img src="../../../assets/logo/e-shop_logo.png" alt="Logo.png" style="height: 50px; width:150px;">
+              </span>
+            </a>
+          </div><br>
+        
+          <h4 class="mb-2">Hello! Your shopping experience starts here...</h4>
+          <p class="mb-4">Make shopping easier with easy-shop</p>
+
+          <form [formGroup]="registerForm" class="mb-3">
+            <div class="mb-3">
+              <label for="firtName" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="firstName"
+                placeholder="First Name"
+                autofocus
+              />
+            </div>
+            <div class="mb-3">
+              <label for="middleName" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="middleName"
+                placeholder="Middle Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName ="lastName"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="userName" class="form-label"></label>
+              <input 
+              type="text" 
+              class="form-control" 
+              formControlName ="userName" 
+              placeholder="Username" 
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label"></label>
+              <input 
+              type="text" 
+              class="form-control" 
+              formControlName ="email" 
+              placeholder="Email (example@email.com)" 
+              />
+            </div>
+
+            <div class="mb-3 form-password-toggle">
+              <label class="form-label" for="password"></label>
+              <div class="input-group input-group-merge">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  formControlName="password"
+                  placeholder="Password"
+                  aria-describedby="password"
+                />
+              </div>
+            </div>
+            <br>
+            <button id="btn" class="btn us-btn-primary d-grid w-100" (click)="signup()" >Sign Up</button>
+          </form>
+
+          <p class="text-center">
+            <span>Already have an account? </span>
+            <a href="auth/signin">
+              <span>Sign In</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <br>
+            <div class="credits">
+                © Seven Seven Trainees 2022, All rights reserved. Made with ❤️ by Group 1   
+            </div> 
+    </div>
+  </div>
+</div>

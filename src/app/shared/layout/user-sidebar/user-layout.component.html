@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="d-flex flex-row justify-content-center">
+  <div id="for-sidebar" *ngIf="isProfilePage" [ngClass]="{'layout-menu-expanded': sidebar}">
+    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+      <div class="menu-inner-shadow"></div>
+
+      <ul class="menu-inner py-1">
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Account</span></li>
+        <li class="menu-item">
+          <a class="btn menu-link" (click)="toProfile()">
+            <i class="menu-icon tf-icons bx bx-crown"></i>
+            <div data-i18n="Boxicons">Profile </div>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a class="btn menu-link" (click)="toAddresses()">
+            <i class="menu-icon tf-icons bx bx-crown"></i>
+            <div data-i18n="Boxicons">Addresses</div>
+          </a>
+        </li>
+
+      </ul>
+    </aside>
+  </div>
+  <div [ngClass]="{'layout-page': isProfilePage}">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

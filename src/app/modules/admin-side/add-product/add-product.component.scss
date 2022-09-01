@@ -1,0 +1,18 @@
+@import '../../../scss/stylemixins';
+
+.form-row {
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.preview-wrapper {
+    
+    display: flex;
+    justify-content: center;
+
+    img {
+        padding: .5rem;
+    }
+}
+

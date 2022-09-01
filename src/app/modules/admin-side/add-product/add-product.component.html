@@ -1,0 +1,65 @@
+<app-admin-command [data]="comData"></app-admin-command>
+
+<section class="page-container">
+    <div class="card-body">
+        <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault01">Item Category</label>
+                    <select  class="form-control" formControlName="category">
+                        <option value="Home Appliances">Home Appliances</option>
+                        <option value="T-shirts and Dresses">T-shirts and Dresses</option>
+                        <option value="Gadget and Accessories">Gadget and Accessories</option>
+                    </select>
+       
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" formControlName="productName" class="form-control"  placeholder="Product Name"
+                        required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" (keypress)="validateInput($event, 12)" formControlName="quantity" class="form-control" placeholder="Quantity" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault01">Date</label>
+                    <input type="text" formControlName="date" class="ng-valid form-control" placeholder="Date" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" (keypress)="validateInput($event, 11)" formControlName="price" class="form-control" placeholder="Price"
+                        required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationDefault02">Payment Type</label>
+                    <select class="form-control" formControlName="paymentType" >
+                        <option value="COD" selected>COD</option>
+                        <option  value="PayMaya">PayMaya</option>
+                        <option  value="GCash">GCash</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault03">Product Description</label>
+                    <textarea formControlName="description" class="form-control" id="" cols="30" rows="16"></textarea>
+                </div><br>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault03">Product Image</label>
+                    <input type="file" accept="image/*"  class="form-control ng-valid"(change)="viewImage($event)"  id="validationDefault03" required>
+                    <div class="preview-wrapper">
+                        <img width="250" height="250"
+                            [src]="imageUrl" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn us-btn-primary"  type="submit">Save Changes</button>
+        </form>
+    </div>
+</section>
+
+
