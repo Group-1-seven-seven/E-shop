@@ -45,10 +45,7 @@ export class UserDashboardComponent implements OnInit {
         city: ['', [Validators.required]],
         province: ['', [Validators.required]],
       })
-
     })
-
-    
   }
 
   ngOnInit(): void {
@@ -57,18 +54,17 @@ export class UserDashboardComponent implements OnInit {
     })
   }
 
-
    previewImage(e: any) {
     if(e.target.files) {
        const reader = new FileReader();
        reader.readAsDataURL(e.target.files[0]);
-       reader.onload = (event: any) => {
+       reader.onload = (e: any) => {
        }
       this.userForm.get('user-profile')?.patchValue(e.target.files[0].name)
     }
    }
 
-   save =() => {
+   save = () => {
     const userData = this.userForm.getRawValue() as User
     this.userService.updateUserInfo(userData).subscribe( x => {
       if(!x.error){
