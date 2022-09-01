@@ -49,6 +49,13 @@ export class ProductsComponent implements OnInit {
     this.getCartData()
   }
 
+  getCartData = () => {
+    return this.cartService.getProductCart(this.userInfo.user?.id).subscribe(data => {
+      // console.log(x)
+      this.cartData = data
+    })
+  }
+
   addToCart(item : any): any{
     const data = {customerId: this.userInfo.user?.id, qty: 1, products: ([Object.assign(item, {qty: 1, cartTotal: item.price * 1})]) as Product[] }
     if(!this.cartData.length) {
@@ -59,7 +66,7 @@ export class ProductsComponent implements OnInit {
     let products: any[] = this.cartData[0].products
     products.filter(x => {
       if(x.id === item.id) {
-        this.toast.error("item already exist in your cart.")
+        this.toast.error("Item already exist in your cart.")
       }else {
         this.cartData[0].products.push(Object.assign(item, {qty: 1, cartTotal: item.price * 1}))
         this.cartService.addCustomerCart({id: this.cartData[0].id, cart: this.cartData[0]}).subscribe(x => {
@@ -88,13 +95,6 @@ export class ProductsComponent implements OnInit {
       if(a.category === category || category === ''){
           return a;
       }
-    })
-  }
-
-  getCartData = () => {
-    return this.cartService.getProductCart(this.userInfo.user?.id).subscribe(data => {
-      // console.log(x)
-      this.cartData = data
     })
   }
 
