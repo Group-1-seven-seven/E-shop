@@ -132,10 +132,5 @@
       "sold": 0,
       "type": "delete"
     }
-  ],
-  "admin": {
-    "role": "admin",
-    "username": "value",
-    "password": "value"
-  }
+  ]
 }
