@@ -18,12 +18,12 @@ export class UsersListComponent implements OnInit {
   }
 
   columns =[
-    {isBtn: true, key: "firstName", isSortable: true, dIcon: false},
-    {isBtn: false, key: "middleName", isSortable: false, dIcon: false}, 
-    {isBtn: false, key: "lastName", isSortable: false, dIcon: false},
-    {isBtn: false, key: "email", isSortable: false, dIcon: false}, 
-    {isBtn: false, key: "contact", isSortable: false, dIcon: false},
-    {isBtn: false, key: "status", isSortable: false, dIcon: false, badge: true},
+    {key: "firstName", isSortable: false, dIcon: false},
+    {key: "middleName", isSortable: false, dIcon: false}, 
+    {key: "lastName", isSortable: false, dIcon: false},
+    {key: "email", isSortable: false, dIcon: false}, 
+    {key: "contact", isSortable: false, dIcon: false},
+    {key: "status", isSortable: false, dIcon: false, badge: true},
   ]
 
   buttons = [

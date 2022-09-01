@@ -19,7 +19,7 @@ export class AddProductComponent implements OnInit {
   dateNow = new Date();
   paramID: any;
 
-  comData = {title: "Add Product"}
+  data = {title: "Add Product"}
 
   constructor(
     private fb: FormBuilder,
@@ -41,7 +41,7 @@ export class AddProductComponent implements OnInit {
       description: ['', [Validators.required]],
       price: ['', [Validators.required]],
       quantity: ['', [Validators.required]],
-      date: [{value: this.datePipe.transform(this.dateNow), disabled: true } ],
+      date: [{value: this.datePipe.transform(this.dateNow), disabled: false } ],
       paymentType: ['', [Validators.required]],
       status: [true],
       customers: this.fb.array([]),
@@ -61,14 +61,14 @@ export class AddProductComponent implements OnInit {
     
   }
 
-  viewImage(e: any) {
-   if(e.target.files) {
+  viewImage(x: any) {
+   if(x.target.files) {
       const reader = new FileReader();
-      reader.readAsDataURL(e.target.files[0]);
+      reader.readAsDataURL(x.target.files[0]);
       reader.onload = (event: any) => {
         this.imageUrl = event.target.result;
       }
-      this.productForm.get('image')?.patchValue(e.target.files[0].name)
+      this.productForm.get('image')?.patchValue(x.target.files[0].name)
    }
 
   }
@@ -79,7 +79,7 @@ export class AddProductComponent implements OnInit {
       !productData.image || !productData.description ||
       !productData.price || !productData.quantity ||
       !productData.date || !productData.paymentType){
-        return this.toast.error('Please fill all the required fields')
+        return this.toast.error('Please fill-out all the fields')
       }
     if(this.paramID) {
       this.adminServices.editProduct(productData).subscribe()

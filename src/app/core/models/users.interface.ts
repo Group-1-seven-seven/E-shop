@@ -7,7 +7,7 @@ export interface User {
     userName: string,
     password: string,
     role: string,
-    status: boolean,
+    condition: boolean,
     contactNo: number,
     dob: Date,
     address: {

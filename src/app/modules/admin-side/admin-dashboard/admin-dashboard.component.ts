@@ -26,10 +26,10 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   columns =[
-    {isBtn: true, key: "category", isSortable: true, dIcon: false}, 
-    {isBtn: true, key: "productName", isSortable: true, dIcon: false},
-    {isBtn: false, key: "price", isSortable: true, dIcon: false}, 
-    {isBtn: false, key: "sold", isSortable: true, dIcon: false}
+    {key: "category", isSortable: true, dIcon: false}, 
+    {key: "productName", isSortable: true, dIcon: false},
+    {key: "price", isSortable: true, dIcon: false}, 
+    {key: "sold", isSortable: true, dIcon: false}
   ]
   
   ngOnInit(): void {

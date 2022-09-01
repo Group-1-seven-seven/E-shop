@@ -11,35 +11,24 @@ export class UserLayoutComponent implements OnInit {
   sidebar = false
   isProfilePage = false
   constructor(private router: Router, private sidebarToggle:SidebarService) {
-    this.router.events.subscribe((e) => {
+    this.router.events.subscribe(() => {
       this.isProfilePage = this.router.url.split('/').includes('profile')
     })
 
-    this.sidebarToggle.getSidebar().subscribe(x => {
-      this.sidebar = x
+    this.sidebarToggle.getSidebar().subscribe(data => {
+      this.sidebar = data
     })
    }
 
-  ngOnInit(): void {
-    
-  }
-
+  ngOnInit(): void {  }
 
   toProfile(){
     this.setSidebar()
     document.getElementById("profile")?.scrollIntoView({behavior: "smooth"});
    }
-   toAddresses(){
+   toAddress(){
     this.setSidebar()
     document.getElementById("addresses")?.scrollIntoView({behavior: "smooth"});
-   }
-   toPassword(){
-    this.setSidebar()
-    document.getElementById("password")?.scrollIntoView({behavior: "smooth"});
-   }
-   toDelete(){
-    this.setSidebar()
-    document.getElementById("delete")?.scrollIntoView({behavior: "smooth"});
    }
 
    setSidebar =() =>{

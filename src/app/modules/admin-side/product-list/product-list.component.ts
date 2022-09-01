@@ -13,10 +13,10 @@ export class ProductListComponent implements OnInit {
   products: ProductItem[] = [];
 
   columns =[
-    {isBtn: true, key: "category", isSortable: true, dIcon: false}, 
-    {isBtn: false, key: "productName", isSortable: false, dIcon: false},
-    {isBtn: false, key: "price", isSortable: false, dIcon: false}, 
-    {isBtn: false, key: "sold", isSortable: false, dIcon: false},
+    {key: "category", isSortable: false, dIcon: false}, 
+    {key: "productName", isSortable: false, dIcon: false},
+    {key: "price", isSortable: false, dIcon: false}, 
+    {key: "sold", isSortable: false, dIcon: false},
   ]
 
   buttons = [

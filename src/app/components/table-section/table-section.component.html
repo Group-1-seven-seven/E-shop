@@ -20,7 +20,7 @@
                     </ng-template>
                     <ng-container *ngIf="(x.key ==='status'); else value">
                         <span  class="badge bg-label-warning me-1 user-status" *ngIf="x.val">Activate</span>
-                        <span  class="badge bg-label-danger me-1 user-status" *ngIf="!x.val">Deactivated</span>
+                        <span  class="badge bg-label-danger me-1 user-status" *ngIf="!x.val">Deactivate</span>
                     </ng-container>
                 </td>
                 <td class="" *ngIf="buttons">

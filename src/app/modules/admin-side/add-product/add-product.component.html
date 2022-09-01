@@ -1,5 +1,3 @@
-<app-admin-command [data]="comData"></app-admin-command>
-
 <section class="page-container">
     <div class="card-body">
         <form [formGroup]="productForm" (ngSubmit)="addProduct()">
@@ -49,15 +47,15 @@
                 </div><br>
                 <div class="col-md-6 mb-3">
                     <label for="validationDefault03">Product Image</label>
-                    <input type="file" accept="image/*"  class="form-control ng-valid"(change)="viewImage($event)"  id="validationDefault03" required>
+                    <input type="file" accept="image/*"  class="form-control ng-valid" (change)="viewImage($event)"  id="validationDefault03" required>
                     <div class="preview-wrapper">
-                        <img width="250" height="250"
-                            [src]="imageUrl" alt="">
+                        <img width="200" height="200"
+                            [src]="imageUrl" alt="product-image.jpeg">
                     </div>
                 </div>
             </div>
             
-            <button class="btn us-btn-primary"  type="submit">Save Changes</button>
+            <button class="btn us-btn-primary"  type="submit">Add / Save Changes</button>
         </form>
     </div>
 </section>

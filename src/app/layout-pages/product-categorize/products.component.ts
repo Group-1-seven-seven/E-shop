@@ -16,8 +16,8 @@ export class ProductsComponent implements OnInit {
 
   public productList: any[] | undefined;
   public filterCategory : any;
-  searchKey: string = "";
   public searchTerm !: string;
+  searchKey: string = "";
   userInfo: any
   cartData: any 
 
@@ -43,8 +43,8 @@ export class ProductsComponent implements OnInit {
       });
     });
 
-    this.cartService.search.subscribe((val: any) => {
-      this.searchKey = val;
+    this.cartService.search.subscribe((value: any) => {
+      this.searchKey = value;
     })
     this.getCartData()
   }
@@ -59,11 +59,11 @@ export class ProductsComponent implements OnInit {
     let products: any[] = this.cartData[0].products
     products.filter(x => {
       if(x.id === item.id) {
-        this.toast.error("The item is already added to cart.")
+        this.toast.error("item already exist in your cart.")
       }else {
         this.cartData[0].products.push(Object.assign(item, {qty: 1, cartTotal: item.price * 1}))
         this.cartService.addCustomerCart({id: this.cartData[0].id, cart: this.cartData[0]}).subscribe(x => {
-          this.toast.success("Product added successfully to cart!")
+          this.toast.success("Successfully added to cart!")
         })
       }
 
@@ -72,7 +72,7 @@ export class ProductsComponent implements OnInit {
     
   }
   
-  goToCart(){
+  goToCart= () => {
     this.router.navigate(['user/user-cart']);
   }
 
@@ -92,9 +92,9 @@ export class ProductsComponent implements OnInit {
   }
 
   getCartData = () => {
-    return this.cartService.getProductCart(this.userInfo.user?.id).subscribe(x => {
+    return this.cartService.getProductCart(this.userInfo.user?.id).subscribe(data => {
       // console.log(x)
-      this.cartData = x
+      this.cartData = data
     })
   }
 

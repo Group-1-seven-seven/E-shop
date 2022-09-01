@@ -39,7 +39,7 @@ export class ProductSectionComponent implements OnInit {
   }
 
   addToCart(item : any){
-    this.toast.success("Added to cart")
+    this.toast.success("Added successfully!")
     this.cartService.addToCart(item);
   }
   
