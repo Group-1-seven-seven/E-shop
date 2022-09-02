@@ -13,7 +13,7 @@ import { UserService } from 'src/app/core/services/users/customer/user.service';
 })
 export class UsersListComponent implements OnInit {
   users: any;
-  comData = {
+  data = {
     title: "Customer"
   }
 

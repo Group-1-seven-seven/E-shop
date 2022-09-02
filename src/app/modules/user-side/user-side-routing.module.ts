@@ -22,7 +22,7 @@ const routes: Routes = [
   component: CheckoutSectionComponent
   },
   {
-  path: "user-orders",
+  path: "user-order",
   component: UserOrderComponent
   }
 ]

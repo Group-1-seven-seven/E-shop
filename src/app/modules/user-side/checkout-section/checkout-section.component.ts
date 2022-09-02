@@ -22,7 +22,7 @@ export class CheckoutSectionComponent implements OnInit {
     this.router.navigate(['user/user-order']);
   }
 
-   backToCart() {
+  goToCart() {
     this.router.navigate(['user/user-cart']);
   }
 

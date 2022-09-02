@@ -9,7 +9,6 @@ export class AdminCommandComponent implements OnInit {
   @Input() data: any
   @Output() commandEmitter = new EventEmitter()
   
-
   constructor() { }
 
   ngOnInit(): void {

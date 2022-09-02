@@ -10,7 +10,7 @@ import { ProductItem } from 'src/app/models/product-item';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  comData = {
+  data = {
     title: "Admin Dashboard",
     buttons: [
       {

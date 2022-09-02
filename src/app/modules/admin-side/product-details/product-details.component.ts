@@ -12,7 +12,7 @@ import { UserService } from 'src/app/core/services/users/customer/user.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent {
-  comData = {
+  data = {
     title: "Details",
     buttons: [
       {
