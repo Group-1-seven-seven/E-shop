@@ -15,12 +15,22 @@ const routes: Routes = [{
 },
 {
   path: "",
+  component: AuthLayoutComponent,
+  children: [
+    {
+      path: "auth",
+      loadChildren: () => import('./components/auth-components/auth.module').then(b => b.AuthModule)
+    }
+  ]
+},
+{
+  path: "",
   component: PagesLayoutComponent,
   canActivate: [RoleGuard],
   children: [
     {
       path: "layout-pages",
-      loadChildren: ()=> import('./layout-pages/layout-pages.module').then(b => b.PagesModule)
+      loadChildren: ()=> import('./layout-pages/layout-pages.module').then(b => b.LayoutPagesModule)
     }
   ]
 },
@@ -45,17 +55,6 @@ const routes: Routes = [{
       loadChildren: () => import('./modules/admin-side/admin-side.module').then(b => b.AdminModule)
     }
   ]
-},
-{
-  path: "",
-  component: AuthLayoutComponent,
-  children: [
-    {
-      path: "auth",
-      loadChildren: () => import('./components/auth-components/auth.module').then(b => b.AuthModule)
-    }
-  ]
-
 }
 ];
 

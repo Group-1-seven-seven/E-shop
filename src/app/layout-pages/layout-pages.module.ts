@@ -21,4 +21,4 @@ import { CommonModule } from '@angular/common';
     FormsModule
   ],
 })
-export class PagesModule { }
+export class LayoutPagesModule { }
