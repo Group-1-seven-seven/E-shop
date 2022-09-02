@@ -10,26 +10,17 @@
       "status": true,
       "contactNo": null,
       "role": "admin",
-      "id": 1,
-      "contact": 9123456789,
-      "dob": "2000-11-19",
-      "loi": [],
-      "address": {
-        "street": "House no.1",
-        "brgy": "123",
-        "city": "Pasig",
-        "province": "NCR"
-      }
+      "id": 1
     },
     {
       "email": "user@email.com",
-      "password": "$2a$10$ec5Akf90SvyeDZYOWCjgue8S/Izk7u4dn.ls2tjpUpEQRdJcE.UBq",
+      "password": "$2a$10$cHelhyyKuxSmMdFGgwXs/OXJLHDeawqsRIcDGv27l3xhrqXiSPz/q",
       "firstName": "jane",
       "middleName": "smith",
       "lastName": "doe",
       "userName": "janesd",
       "status": true,
-      "contactNo": null,
+      "contact": null,
       "role": "user",
       "id": 2
     }

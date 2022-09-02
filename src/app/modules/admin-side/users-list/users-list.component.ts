@@ -26,7 +26,7 @@ export class UsersListComponent implements OnInit {
 
   buttons = [
     {type: "Deactivate", type2: "Activate",  bgColor: "btn-success"},
-    {type: "View", type2: "View", bgColor: "btn-info"}
+    {type: "View", type2: "View", bgColor: "btn-success"}
   ]
   
   constructor(private router: Router, 

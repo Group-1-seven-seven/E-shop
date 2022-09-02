@@ -5,18 +5,14 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/core/models/users.interface';
 import { UserService } from 'src/app/core/services/users/customer/user.service';
 
-export interface ChangePassword {
-  newPassword: string,
-  confirmPassword: string
-}
-
 @Component({
   selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html',
   styleUrls: ['./user-dashboard.component.scss']
 })
+
 export class UserDashboardComponent implements OnInit {
-  showModal = false;
+  // showModal = false;
   userForm: FormGroup;
   date = new Date();
 
@@ -52,15 +48,15 @@ export class UserDashboardComponent implements OnInit {
     })
   }
 
-   previewImage(e: any) {
-    if(e.target.files) {
-       const reader = new FileReader();
-       reader.readAsDataURL(e.target.files[0]);
-       reader.onload = (e: any) => {
-       }
-      this.userForm.get('user-profile')?.patchValue(e.target.files[0].name)
-    }
-   }
+  //  previewImage(e: any) {
+  //   if(e.target.files) {
+  //      const reader = new FileReader();
+  //      reader.readAsDataURL(e.target.files[0]);
+  //      reader.onload = (e: any) => {
+  //      }
+  //     this.userForm.get('user-profile')?.patchValue(e.target.files[0].name)
+  //   }
+  //  }
 
    save = () => {
     const userData = this.userForm.getRawValue() as User
