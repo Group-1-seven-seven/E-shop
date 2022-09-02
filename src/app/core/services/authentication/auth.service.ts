@@ -10,7 +10,9 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient, private router: Router, private toast: ToastrService ) { }
+  constructor(private http: HttpClient, 
+              private router: Router, 
+              private toast: ToastrService ) { }
 
   getToken(){
     return localStorage.getItem("token")? true: false;

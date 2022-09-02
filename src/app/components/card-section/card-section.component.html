@@ -1,15 +1,14 @@
 <div class="details-container w-100" >
-    <ng-container *ngFor="let d of data">
-        <div class="card-details d-flex flex-column  justify-content-between" *ngIf="(d.name !== 'rating')">
-
-            <ng-container *ngIf="d.hasChild; else noChild">
+    <ng-container *ngFor="let data of data">
+        <div class="card-details d-flex flex-column  justify-content-between" *ngIf="(data.name !== 'rating')">
+            <ng-container *ngIf="data.hasChild; else noChild">
                 <div class="content-wrapper d-flex flex-row alig-items-center justify-content-center" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    data-bs-target="#collapseExample" aria-controls="collapseExample" aria-expanded="false" >
                     <div class="card-title-container" >
-                        {{d.name}}
+                        {{data.name}}
                     </div>
                     <div class="card-title-value">
-                        {{d.key}}
+                        {{data.key}}
                     </div>
                 </div>
             </ng-container>
@@ -17,17 +16,17 @@
             <ng-template #noChild>
                 <div class="content-wrapper d-flex flex-row alig-items-center justify-content-center" >
                     <div class="card-title-container">
-                        {{d.name}}
+                        {{data.name}}
                     </div>
                     <div class="card-title-value">
-                        {{d.key}}
+                        {{data.key}}
                     </div>
                 </div>
             </ng-template>
-            <div class="collapse mt-4" id="collapseExample" *ngIf="d.hasChild">
+            <div class="collapse mt-4" id="collapseExample" *ngIf="data.hasChild">
                 <div class="d-grid d-sm-flex p-3 border">        
                     <div class="w-100 d-flex flex-column" >
-                        <a href="!#" *ngFor="let da of d.key">{{da}}</a>
+                        <a href="!#" *ngFor="let da of data.key">{{da}}</a>
                     </div>
                 </div>
             </div>

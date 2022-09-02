@@ -42,9 +42,8 @@
       <div class="container-fluid flex-grow-1 container-p-y">
         <div class="container">
           <div class="row">
-            <ng-container *ngFor="let item of filterCategory | filter :searchKey: 'productName'">
+            <ng-container *ngFor="let item of filterCategories | filter :searchKey: 'productName'">
               <div class="card col-md-3">
-    
                 <img [src]="'../../../assets/products/' + item.image ">
                 <h4>{{item.productName | slice: 0:20}}</h4>
                 <p>{{item.description | slice: 0:30}}</p>

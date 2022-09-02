@@ -5,13 +5,13 @@ import { catchError, Observable, of, tap } from 'rxjs';
 import { User } from 'src/app/core/models/users.interface';
 import { environment } from 'src/environments/environment.prod';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
   userID: string = "";
+
   constructor(private http: HttpClient, private toast: ToastrService) {
     const userInfo = localStorage.getItem("user")
     if(userInfo){

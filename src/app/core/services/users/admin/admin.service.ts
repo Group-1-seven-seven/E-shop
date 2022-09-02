@@ -13,13 +13,6 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts = (page: number = 1, limit: number = 5, sort: string = 'sold', order: string = 'desc'): Observable<ProductItem[]> => {
-    return this.http.get<ProductItem[]>(`${environment.url}/products?_page1=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`)
-    .pipe(
-      tap(x => x)
-    )
-  }
-
   getAllProducts = (): Observable<ProductItem[]> => {
     return this.http.get<ProductItem[]>(`${environment.url}/products`)
     .pipe(
@@ -27,10 +20,17 @@ export class AdminService {
     )
   }
 
+  getProducts = (page: number = 1, limit: number = 5, sort: string = 'sold', order: string = 'desc'): Observable<ProductItem[]> => {
+    return this.http.get<ProductItem[]>(`${environment.url}/products?_page1=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`)
+    .pipe(
+      tap(x => x)
+    )
+  }
+
   getProductById = (id: number) => {
     return this.getAllProducts().pipe(
-      map((x: ProductItem[]) => {
-        return  x.filter( i => i.id === id)
+      map((p: ProductItem[]) => {
+        return  p.filter( i => i.id === id)
       })
     )
   }

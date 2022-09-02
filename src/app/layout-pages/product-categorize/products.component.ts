@@ -4,8 +4,8 @@ import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/core/models/products.interface';
 import { CartService } from 'src/app/core/services/cart/cart.service';
 import { ProductsService } from 'src/app/core/services/product/products.service';
-import { CartItem } from 'src/app/models/cart-item';
-import { of } from 'rxjs';
+// import { CartItem } from 'src/app/models/cart-item';
+// import { of } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -15,7 +15,7 @@ import { of } from 'rxjs';
 export class ProductsComponent implements OnInit {
 
   public productList: any[] | undefined;
-  public filterCategory : any;
+  public filterCategories : any;
   public searchTerm !: string;
   searchKey: string = "";
   userInfo: any
@@ -36,7 +36,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getProduct().subscribe(res => {
       this.productList = res;
-      this.filterCategory = res;
+      this.filterCategories = res;
 
       this.productList.forEach((a : any) => {
         Object.assign(a, {quantity : 1, total : a.price})
@@ -90,7 +90,7 @@ export class ProductsComponent implements OnInit {
   // }
 
   filter(category: string){
-    this.filterCategory = this.productList!
+    this.filterCategories = this.productList!
     .filter((a:any) => {
       if(a.category === category || category === ''){
           return a;

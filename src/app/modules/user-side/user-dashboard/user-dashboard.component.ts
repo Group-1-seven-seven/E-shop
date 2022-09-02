@@ -5,8 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/core/models/users.interface';
 import { UserService } from 'src/app/core/services/users/customer/user.service';
 
-
-
 export interface ChangePassword {
   newPassword: string,
   confirmPassword: string
@@ -20,7 +18,7 @@ export interface ChangePassword {
 export class UserDashboardComponent implements OnInit {
   showModal = false;
   userForm: FormGroup;
-  dateNow = new Date();
+  date = new Date();
 
   constructor(private fb: FormBuilder, 
     private userService: UserService, 

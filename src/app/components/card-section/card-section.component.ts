@@ -9,7 +9,7 @@ export class CardSectionComponent implements OnInit {
   @Input() data: any
 
   constructor() {
-    console.log(this.data, "from card")
+    // console.log(this.data, "from card")
    }
 
   ngOnInit(): void {

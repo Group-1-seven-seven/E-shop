@@ -30,7 +30,7 @@ export class UserCartComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    const cartItem: any[] = this.cartItems
+    // const cartItem: any[] = this.cartItems
   }
   
   decreaseQty(item : any){
@@ -70,7 +70,6 @@ export class UserCartComponent implements OnInit {
     this.cartService.removeAll()
   }
 
-  
 
   // placeOrder(item : any){
   //   this.toast.success("Your order has been placed")

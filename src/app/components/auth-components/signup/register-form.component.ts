@@ -12,7 +12,9 @@ import { UserAuthentication } from '../auth-model/auth-interface';
 export class RegisterFormComponent implements OnInit {
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private toast: ToastrService) {
+  constructor(private fb: FormBuilder, 
+              private authService: AuthService, 
+              private toast: ToastrService) {
     this.registerForm = this.fb.group({
       firstName: ['', [Validators.required]],
       middleName: ['', [Validators.required]],
@@ -21,7 +23,7 @@ export class RegisterFormComponent implements OnInit {
       email: ['', [Validators.required]],
       password: ['', [Validators.required]],
       status: [true],
-      contactNo: [],
+      contact: [],
       role: ["user"]
     })
    }

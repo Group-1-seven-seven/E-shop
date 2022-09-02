@@ -10,7 +10,16 @@
       "status": true,
       "contactNo": null,
       "role": "admin",
-      "id": 1
+      "id": 1,
+      "contact": 9123456789,
+      "dob": "2000-11-19",
+      "loi": [],
+      "address": {
+        "street": "House no.1",
+        "brgy": "123",
+        "city": "Pasig",
+        "province": "NCR"
+      }
     },
     {
       "email": "user@email.com",
@@ -116,21 +125,6 @@
       "rating": [],
       "customers": [],
       "sold": 34
-    },
-    {
-      "id": 7,
-      "category": "Home Appliances",
-      "productName": "Blender",
-      "image": "homeappliances3.jpg",
-      "description": "Brand New Blender",
-      "price": "5000",
-      "quantity": "5",
-      "date": "Sep 1, 2022",
-      "paymentType": "GCash",
-      "status": false,
-      "customers": [],
-      "sold": 0,
-      "type": "delete"
     }
   ]
 }

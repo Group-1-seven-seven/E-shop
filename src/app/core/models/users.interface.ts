@@ -10,6 +10,7 @@ export interface User {
     condition: boolean,
     contactNo: number,
     dob: Date,
+    loi: [],
     address: {
         street: string,
         brgy: string,

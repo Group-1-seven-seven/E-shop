@@ -13,16 +13,14 @@ import { UserService } from 'src/app/core/services/users/customer/user.service';
 })
 export class UsersListComponent implements OnInit {
   users: any;
-  data = {
-    title: "Customer"
-  }
 
   columns =[
     {key: "firstName", isSortable: false, dIcon: false},
     {key: "middleName", isSortable: false, dIcon: false}, 
     {key: "lastName", isSortable: false, dIcon: false},
+    {key: "userName", isSortable: false, dIcon: false},
     {key: "email", isSortable: false, dIcon: false}, 
-    {key: "contact", isSortable: false, dIcon: false},
+    {key: "contactNo", isSortable: false, dIcon: false},
     {key: "status", isSortable: false, dIcon: false, badge: true},
   ]
 

@@ -1,5 +1,5 @@
 <div class="card">
-    <h5 class="card-header">Cart</h5> 
+    <h5 class="card-header"></h5> 
     <div class="table-responsive text-nowrap">
       <table class="table table-hover"  *ngIf="cartItems?.length; else noItemsInCart" >
         <thead class="text-center">
@@ -52,7 +52,7 @@
     <div class="table-footer" *ngIf="cartItems?.length;">
       <div class="shopping-cart-footer">
         <div class="column">
-            <button  class="btn btn-outline-secondary" (click)="pageProducts()">Continue Shopping</button>
+            <button  class="btn btn-outline-secondary" (click)="pageProducts()">Shop Again</button>
         </div>
         <div class="column">
           <button 

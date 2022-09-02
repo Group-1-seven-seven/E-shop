@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./admin-command.component.scss']
 })
 export class AdminCommandComponent implements OnInit {
+  
   @Input() data: any
   @Output() commandEmitter = new EventEmitter()
   
