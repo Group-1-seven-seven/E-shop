@@ -13,7 +13,7 @@ import { UserService } from 'src/app/core/services/users/customer/user.service';
 })
 export class ProductDetailsComponent {
   data = {
-    title: "Details",
+    title: "View Information",
     buttons: [
       {
       type: "add-product",
