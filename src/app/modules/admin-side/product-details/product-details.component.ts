@@ -2,8 +2,6 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from 'src/app/core/services/users/admin/admin.service';
 import { UserService } from 'src/app/core/services/users/customer/user.service';
-
-
 //import { Product } from 'src/app/models/product-item';
 
 @Component({
@@ -38,18 +36,18 @@ export class ProductDetailsComponent {
     })
     if(this.paramType === 'products') {
       this.adminServices.getProductById(parseInt(this.paramID)).subscribe(data => {
-        this.modifyData(data[0])
+        this.modifyInfo(data[0])
       })
     }else if(this.paramType === 'users') {
       this.userService.getUserCredential(this.paramID).subscribe(x => {
         console.log(x)
-        this.modifyData(x)
+        this.modifyInfo(x)
       })
     }
 
   }
 
-  modifyData (data: any) {
+  modifyInfo (data: any) {
     delete data.password
     delete data.id
     delete data.type
@@ -72,6 +70,4 @@ export class ProductDetailsComponent {
       this.router.navigate(['admin/add-product'])
     }
   }
-
-
 }
