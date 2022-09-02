@@ -13,7 +13,7 @@ import { UserService } from 'src/app/core/services/users/customer/user.service';
 })
 export class ProductDetailsComponent {
   data = {
-    title: "View Information",
+    title: "Detailed Information",
     buttons: [
       {
       type: "add-product",
@@ -67,7 +67,7 @@ export class ProductDetailsComponent {
     })
   }
 
-  comActionEmit =(data: any) => {
+  actionEmit =(data: any) => {
     if(data.type === 'add-product'){
       this.router.navigate(['admin/add-product'])
     }

@@ -4,9 +4,7 @@
           CUSTOMER LIST
         </div>
         <app-table-section  
-            [data]="users" 
-            [columns]="columns" 
-            [buttons]="buttons"
+            [data]="users" [columns]="columns" [buttons]="buttons"
             (actionEmitter)="tableAction($event)"
         ></app-table-section>
     </div>
