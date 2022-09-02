@@ -41,7 +41,7 @@ const routes: Routes = [{
   children: [
     {
       path: "user",
-      loadChildren: () =>   import('./modules/user-side/user-side.module').then(b => b.UserModule)
+      loadChildren: () =>   import('./modules/user-side/user-side.module').then(b => b.UserSideModule)
     },
   ]
 },
@@ -52,7 +52,7 @@ const routes: Routes = [{
   children: [
     {
       path: 'admin',
-      loadChildren: () => import('./modules/admin-side/admin-side.module').then(b => b.AdminModule)
+      loadChildren: () => import('./modules/admin-side/admin-side.module').then(b => b.AdminSideModule)
     }
   ]
 }

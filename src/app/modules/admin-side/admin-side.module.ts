@@ -33,4 +33,4 @@ import { AdminCommandComponent } from './admin-command/admin-command.component';
     FormBuilder
   ]
 })
-export class AdminModule { }
+export class AdminSideModule { }

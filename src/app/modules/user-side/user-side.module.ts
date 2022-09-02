@@ -25,4 +25,4 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     FormBuilder
   ]
 })
-export class UserModule { }
+export class UserSideModule { }
